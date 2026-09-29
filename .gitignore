@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+.venv/
+*.npz
+*.npy
+*.csv
+*.json
+*.jsonl
+*.pt
+*.pkl
+data/
+results/
