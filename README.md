@@ -1,15 +1,8 @@
-# What a Moderation Budget Buys
+# Intro
 
-Source for the main allocation method in *What a Moderation Budget Buys: Repair
-Opportunities, Allocation Loss, and Charging*. Given development/test prediction
-banks, this package fits RF and LR repair-gain estimators, runs exact full/prefix
+Given development/test prediction banks, this package fits RF and LR repair-gain estimators, runs exact full/prefix
 allocation and ranked charging policies, and computes paired rerouted intervals.
 It runs on CPU and does not need PyTorch.
-
-This is a **source-only release**. It contains no datasets, split maps, labels,
-prediction banks, checkpoints, sample fixtures, or saved results. Supply your
-existing prediction banks through the connector below. All outputs must be
-outside this source directory.
 
 ## Install and smoke test
 
@@ -170,30 +163,3 @@ strata remain missing. Fixed-charge frontier losses are intentionally undefined
 for refunded policies. `main_protocol_settings` records only seed/draw settings;
 it does not certify that supplied banks are the manuscript's original data.
 
-## Scope and source provenance
-
-The main numerical bodies are adapted from this project's frozen
-`optimizer_probe.py`, `single_post_exact_group_audit.py`,
-`single_post_pretrained_charging.py`, `c_budget.py`, `derive_audit.py`,
-`c_rerouting.py`, and `c_rerouting_summary.py`. Local raw-text audits, historical
-archive/source-hash gates, and workspace path discovery have been replaced by
-the explicit connector. The allocator, estimator settings, row-order tie rules,
-reservation/refund semantics, draw construction and paired aggregation are
-retained. No third-party L2D code is used.
-
-This package starts **after base-model prediction and reference-action export**.
-It does not train TAMA/OLID-BR/MOLD classifiers, create those banks, rerun the
-lexical gain-seed/cost sweeps, reproduce target-only or same-menu objective
-appendix controls, or regenerate manuscript figures. Reproducing original
-paper numbers requires the original externally supplied frozen prediction
-banks and partitions. Synthetic smoke success is not evidence of reproduction.
-
-Dataset attribution: TAMA is described by Liu et al., *TAMA: Target-Aware
-Multilingual Abuse Detection by Cascaded Conditional Multi-Task Learning*
-(ACL 2026). The OLID-BR dataset is available from
-[dougtrajano/olid-br](https://huggingface.co/datasets/dougtrajano/olid-br), study
-revision `84b0d7dd4309be677a47c535632a9398ff1897bd`; MOLD 2.0 from
-[TharinduDR/MOLD](https://github.com/TharinduDR/MOLD), study commit
-`6775a561c51987fbcd1c220109f492702b8cf0cd`. The audited external dataset releases
-declare CC BY 4.0. Obtain authorized data and comply with its terms separately;
-no dataset or upstream dataset source code is redistributed here.
