@@ -1,4 +1,4 @@
-# Intro
+# Allocating Budgets for Complete Moderation Decisions
 
 Given development/test prediction banks, this package fits RF and LR repair-gain estimators, runs exact full/prefix
 allocation and ranked charging policies, and computes paired rerouted intervals.
